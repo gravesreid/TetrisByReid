@@ -132,7 +132,7 @@ void Shapes::Initialize()
         };
         break;
     case ShapeType::S:
-        color = {97, 75, 38};
+        color = {102, 107, 4};
         rotations = {
             {{
                 {0, 1, 1, 0},

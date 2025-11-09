@@ -83,7 +83,7 @@ void Grid::Draw(void)
     glVertex2i(windowW/2 - gridW/2,windowH);
     glEnd();
     // draw grid lines
-    glColor3f(0,0.15,0);
+    glColor3f(.68, .68, .68);
     for(int i=0; i<=c; ++i)
     {
         glBegin(GL_LINES);
@@ -100,7 +100,6 @@ void Grid::Draw(void)
     }
 
     // draw current shape
-    glColor3ub(currentShapeColor.r, currentShapeColor.g, currentShapeColor.b);
     for (int i = 0; i < 4; ++i)
     {
         for (int j = 0; j < 4; ++j)
@@ -109,7 +108,16 @@ void Grid::Draw(void)
             {
                 int x = (currentShapePosition.col + j) * cellSize + (windowW/2 - gridW/2);
                 int y = (currentShapePosition.row + i) * cellSize;
+                glColor3ub(currentShapeColor.r, currentShapeColor.g, currentShapeColor.b);
                 glBegin(GL_QUADS);
+                glVertex2i(x, y);
+                glVertex2i(x + cellSize, y);
+                glVertex2i(x + cellSize, y + cellSize);
+                glVertex2i(x, y + cellSize);
+                glEnd();
+                // draw border
+                glColor3f(0,0,0);
+                glBegin(GL_LINE_LOOP);
                 glVertex2i(x, y);
                 glVertex2i(x + cellSize, y);
                 glVertex2i(x + cellSize, y + cellSize);
@@ -119,7 +127,6 @@ void Grid::Draw(void)
         }
     }
     // draw next shape preview
-    glColor3ub(nextShapeColor.r, nextShapeColor.g, nextShapeColor.b);
     for (int i = 0; i < 4; ++i)
     {
         for (int j = 0; j < 4; ++j)
@@ -128,7 +135,16 @@ void Grid::Draw(void)
             {
                 int x = windowW - 250 + j * cellSize;
                 int y = 100 + i * cellSize;
+                glColor3ub(nextShapeColor.r, nextShapeColor.g, nextShapeColor.b);
                 glBegin(GL_QUADS);
+                glVertex2i(x, y);
+                glVertex2i(x + cellSize, y);
+                glVertex2i(x + cellSize, y + cellSize);
+                glVertex2i(x, y + cellSize);
+                glEnd();
+                // draw border
+                glColor3f(0,0,0);
+                glBegin(GL_LINE_LOOP);
                 glVertex2i(x, y);
                 glVertex2i(x + cellSize, y);
                 glVertex2i(x + cellSize, y + cellSize);
@@ -162,7 +178,7 @@ void Grid::Draw(void)
                 case 2: blockColor = {62, 41, 96}; break;   
                 case 3: blockColor = {97, 75, 38}; break;
                 case 4: blockColor = {171, 145, 115}; break; 
-                case 5: blockColor = {97, 75, 38}; break;   
+                case 5: blockColor = {102, 107, 4}; break;   
                 case 6: blockColor = {69, 94, 122}; break; 
                 case 7: blockColor = {69, 122, 77}; break;   
                 default: blockColor = {121, 122, 69}; break;
@@ -171,6 +187,14 @@ void Grid::Draw(void)
                 int x = col * cellSize + (windowW/2 - gridW/2);
                 int y = row * cellSize;
                 glBegin(GL_QUADS);
+                glVertex2i(x, y);
+                glVertex2i(x + cellSize, y);
+                glVertex2i(x + cellSize, y + cellSize);
+                glVertex2i(x, y + cellSize);
+                glEnd();
+                // draw border
+                glColor3f(0,0,0);
+                glBegin(GL_LINE_LOOP);
                 glVertex2i(x, y);
                 glVertex2i(x + cellSize, y);
                 glVertex2i(x + cellSize, y + cellSize);

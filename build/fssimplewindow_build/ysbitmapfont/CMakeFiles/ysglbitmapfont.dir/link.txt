@@ -1,0 +1,2 @@
+/usr/bin/ar qc libysglbitmapfont.a CMakeFiles/ysglbitmapfont.dir/src/ysglfontdata.c.o CMakeFiles/ysglbitmapfont.dir/src/ysglusefontbitmap.c.o CMakeFiles/ysglbitmapfont.dir/src/ysglmaketextbitmap.c.o
+/usr/bin/ranlib libysglbitmapfont.a

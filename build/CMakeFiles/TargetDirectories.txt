@@ -1,0 +1,12 @@
+/home/reid/projects/engineering_computation/tetris/build/CMakeFiles/tetris.dir
+/home/reid/projects/engineering_computation/tetris/build/CMakeFiles/edit_cache.dir
+/home/reid/projects/engineering_computation/tetris/build/CMakeFiles/rebuild_cache.dir
+/home/reid/projects/engineering_computation/tetris/build/fssimplewindow_build/CMakeFiles/fssimplewindow.dir
+/home/reid/projects/engineering_computation/tetris/build/fssimplewindow_build/CMakeFiles/edit_cache.dir
+/home/reid/projects/engineering_computation/tetris/build/fssimplewindow_build/CMakeFiles/rebuild_cache.dir
+/home/reid/projects/engineering_computation/tetris/build/fssimplewindow_build/ysbitmapfont/CMakeFiles/ysglbitmapfont.dir
+/home/reid/projects/engineering_computation/tetris/build/fssimplewindow_build/ysbitmapfont/CMakeFiles/edit_cache.dir
+/home/reid/projects/engineering_computation/tetris/build/fssimplewindow_build/ysbitmapfont/CMakeFiles/rebuild_cache.dir
+/home/reid/projects/engineering_computation/tetris/build/yssimplesound_build/CMakeFiles/yssimplesound.dir
+/home/reid/projects/engineering_computation/tetris/build/yssimplesound_build/CMakeFiles/edit_cache.dir
+/home/reid/projects/engineering_computation/tetris/build/yssimplesound_build/CMakeFiles/rebuild_cache.dir
