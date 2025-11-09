@@ -126,7 +126,7 @@ void Grid::Draw(void)
         {
             if (nextShapeArray[i][j] == 1)
             {
-                int x = windowW - 150 + j * cellSize;
+                int x = windowW - 250 + j * cellSize;
                 int y = 100 + i * cellSize;
                 glBegin(GL_QUADS);
                 glVertex2i(x, y);
@@ -140,10 +140,10 @@ void Grid::Draw(void)
     // draw box around next shape preview
     glColor3f(1,1,1);
     glBegin(GL_LINE_LOOP);
-    glVertex2i(windowW - 150, 75);
-    glVertex2i(windowW - 150 + 4*cellSize, 75);
-    glVertex2i(windowW - 150 + 4*cellSize, 75 + 4*cellSize);
-    glVertex2i(windowW - 150, 75 + 4*cellSize);
+    glVertex2i(windowW - 250, 75);
+    glVertex2i(windowW - 250 + 4*cellSize, 75);
+    glVertex2i(windowW - 250 + 4*cellSize, 75 + 4*cellSize);
+    glVertex2i(windowW - 250, 75 + 4*cellSize);
     glEnd();
     // draw existing blocks in gridState
     for (int row = 0; row < r; ++row)
@@ -158,14 +158,14 @@ void Grid::Draw(void)
                 Color blockColor;
                 switch (shapeType)
                 {
-                case 1: blockColor = {0, 255, 255}; break; // I - Cyan
-                case 2: blockColor = {0, 0, 255}; break;   // J - Blue
-                case 3: blockColor = {255, 165, 0}; break; // L - Orange
-                case 4: blockColor = {255, 255, 0}; break; // O - Yellow
-                case 5: blockColor = {0, 255, 0}; break;   // S - Green
-                case 6: blockColor = {128, 0, 128}; break; // T - Purple
-                case 7: blockColor = {255, 0, 0}; break;   // Z - Red
-                default: blockColor = {255, 255, 255}; break; // Default - White
+                case 1: blockColor = {38, 91, 97}; break; 
+                case 2: blockColor = {97, 38, 38}; break;   
+                case 3: blockColor = {97, 75, 38}; break;
+                case 4: blockColor = {171, 145, 115}; break; 
+                case 5: blockColor = {97, 75, 38}; break;   
+                case 6: blockColor = {69, 94, 122}; break; 
+                case 7: blockColor = {69, 122, 77}; break;   
+                default: blockColor = {121, 122, 69}; break;
                 }
                 glColor3ub(blockColor.r, blockColor.g, blockColor.b);
                 int x = col * cellSize + (windowW/2 - gridW/2);
@@ -216,7 +216,7 @@ void Grid::CheckCollision(Shapes &shape)
     }
 }
 
-void Grid::GetInput()
+bool Grid::GetInput()
 {
     auto key = FsInkey();
     if (key == FSKEY_LEFT && CanMove(currentShape, 0, -1))
@@ -237,13 +237,14 @@ void Grid::GetInput()
     }
     else if (key == FSKEY_ESC)
     {
-        exit(0);
+        return false;
     }
 
     // Update current shape properties after movement/rotation
     currentShapeArray = currentShape.GetCurrentRotation();
     currentShapeColor = currentShape.GetColor();
     currentShapePosition = currentShape.GetPosition();
+    return true;
 }
 
 void Grid::UpdateGridState()

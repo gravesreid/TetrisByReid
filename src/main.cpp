@@ -10,10 +10,10 @@
 
 int main(void)
 {
-	FsOpenWindow(50,50,800,600,0);
+	FsOpenWindow(75,75,1200,900,0);
 
     Grid grid;
-    grid.Initialize(800, 600, 300, 600, 20, 10);
+    grid.Initialize(1200, 900, 450, 900, 20, 10);
 
     YsSoundPlayer player;
     player.MakeCurrent();
@@ -21,11 +21,13 @@ int main(void)
     YsSoundPlayer::SoundData backgroundMusic;
     backgroundMusic.LoadWav("../audio/tetris.wav");
 
-    for(;;)
+    bool running = true;
+
+    while(running)
 	{
 	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
         grid.Draw();
-        grid.GetInput();
+        running =grid.GetInput();
         grid.CheckCollision(grid.currentShape);
         int t = FsPassedTime();
         grid.StepGame(static_cast<float>(t));
@@ -35,5 +37,7 @@ int main(void)
 		FsSleep(20);
 	player.PlayBackground(backgroundMusic);
 	}
+    player.Stop(backgroundMusic);
+    player.End();
 	return 0;
 }

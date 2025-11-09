@@ -25,7 +25,7 @@ public:
     void Initialize(int windowWidth, int windowHeight, int gridWidth, int gridHeight, int rows=20, int cols=10);
     void Draw(void);
     void CheckCollision(Shapes &shape);
-    void GetInput();
+    bool GetInput();
     void StepGame(float deltaTime);
 
 private:

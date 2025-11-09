@@ -16,7 +16,7 @@ void Shapes::Initialize()
     switch (shapeType)
     {
     case ShapeType::I:
-        color = {0, 255, 255}; // Cyan
+        color = {38, 91, 97}; 
         rotations = {
             {{
                 {0, 0, 0, 0},
@@ -45,7 +45,7 @@ void Shapes::Initialize()
         };
         break;
     case ShapeType::J:
-        color = {0, 0, 255}; // Blue
+        color = {97, 38, 38}; 
         rotations = {
             {{
                 {1, 0, 0, 0},
@@ -74,7 +74,7 @@ void Shapes::Initialize()
         };
         break;
     case ShapeType::L:
-        color = {255, 165, 0}; // Orange
+        color = {97, 75, 38}; 
         rotations = {
             {{
                 {0, 0, 1, 0},
@@ -103,7 +103,7 @@ void Shapes::Initialize()
         };
         break;
     case ShapeType::O:
-        color = {255, 255, 0}; // Yellow
+        color = {171, 145, 115};
         rotations = {
             {{
                 {0, 1, 1, 0},
@@ -132,7 +132,7 @@ void Shapes::Initialize()
         };
         break;
     case ShapeType::S:
-        color = {0, 255, 0}; // Green
+        color = {97, 75, 38};
         rotations = {
             {{
                 {0, 1, 1, 0},
@@ -161,7 +161,7 @@ void Shapes::Initialize()
         };
         break;
     case ShapeType::T:
-        color = {128, 0, 128}; // Purple
+        color = {69, 94, 122}; 
         rotations = {
             {{
                 {0, 1, 0, 0},
@@ -190,7 +190,7 @@ void Shapes::Initialize()
         };
         break;
     case ShapeType::Z:
-        color = {255, 0, 0}; // Red
+        color = {69, 122, 77}; 
         rotations = {
             {{
                 {1, 1, 0, 0},
