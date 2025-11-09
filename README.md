@@ -4,6 +4,37 @@ This is a recreation of one of my favorite games in c++. It requires the library
 
 This is only configured to compile on Linux
 
+## Steps to Build
+```
+git clone https://github.com/gravesreid/TetrisByReid.git
+```
+```
+ git clone https://github.com/gravesreid/great_YS_libraries.git
+```
+```
+cd tetris
+```
+```
+mkdir build
+```
+```
+cd build
+```
+```
+cmake ..
+```
+```
+cmake --build .
+```
+
+## Start the game
+```
+cd build
+```
+```
+./tetris
+```
+
 ## Controls
 - Up arrow: change shape orientation
 - Down arrow: accelerate shape
