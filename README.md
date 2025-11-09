@@ -12,7 +12,7 @@ git clone https://github.com/gravesreid/TetrisByReid.git
  git clone https://github.com/gravesreid/great_YS_libraries.git
 ```
 ```
-cd tetris
+cd TetrisByReid
 ```
 ```
 mkdir build
