@@ -159,7 +159,7 @@ void Grid::Draw(void)
                 switch (shapeType)
                 {
                 case 1: blockColor = {38, 91, 97}; break; 
-                case 2: blockColor = {97, 38, 38}; break;   
+                case 2: blockColor = {62, 41, 96}; break;   
                 case 3: blockColor = {97, 75, 38}; break;
                 case 4: blockColor = {171, 145, 115}; break; 
                 case 5: blockColor = {97, 75, 38}; break;   
